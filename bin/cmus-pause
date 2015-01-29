@@ -1,0 +1,5 @@
+#!/bin/sh
+
+cmus-remote -u
+
+exit 0

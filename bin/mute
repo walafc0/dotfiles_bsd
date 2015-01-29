@@ -1,0 +1,10 @@
+#!/bin/sh
+
+ACTION="100" # Means unmute (ugly method)
+STATE=$(mixer pcm | awk '{print $NF}')
+
+if [ $STATE != "0:0" ]; then
+    ACTION="mute";
+fi
+
+mixer pcm $ACTION

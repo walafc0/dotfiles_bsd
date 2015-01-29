@@ -1,0 +1,13 @@
+#!/bin/sh
+
+VOL=$(mixer vol | awk '{print $NF}' | cut -d':' -f 2)
+VOL="Vol:$VOL%"
+
+MUTE=$(mixer pcm | awk '{print $NF}')
+
+if [ "$MUTE" = "0:0" ]; then
+    VOL="$VOL [muted]"
+fi
+
+echo $VOL
+

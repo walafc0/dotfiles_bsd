@@ -1,0 +1,11 @@
+#!/bin/sh
+
+FSPACE=$(df -h | awk '/home/ {print $4} ')
+FSPACE="Free space: $(echo $FSPACE)"
+
+UP=$(uptime | awk '{print $3}' | tr -d ',')
+UP="Uptime: $UP"
+
+FINAL="$FSPACE | $UP"
+
+echo $FINAL

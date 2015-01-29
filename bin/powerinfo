@@ -1,0 +1,8 @@
+#!/bin/sh
+
+LIFE=$(acpiconf -i 0 | awk '/Remaining capacity/ { print $NF }')
+STATE=$(acpiconf -i 0 | awk '/State/ { print $NF }')
+
+echo "[$STATE] $LIFE"
+
+exit 0

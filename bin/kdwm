@@ -1,0 +1,9 @@
+#!/bin/sh
+
+VER=6.0
+cd $HOME/.dwm/dwm-$VER
+
+clear
+su -m root -c "make uninstall clean"
+make
+su -m root -c "make install clean"

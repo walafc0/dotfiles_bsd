@@ -1,0 +1,8 @@
+[localrules=10]
+add path 'da*'  mode 0660 group wheel
+add path 'md*'  mode 0660 group wheel
+add path 'ada*' mode 0660 group wheel
+
+[system=5]
+add path ugen0.2 mode 0660 group usb
+add path usb/0.2.0 mode 0666 group usb

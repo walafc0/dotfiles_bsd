@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# Send document to correct directory on college's NFS
+scp "$@" gateway:~/tmp/to_print

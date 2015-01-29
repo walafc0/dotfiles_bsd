@@ -1,0 +1,4 @@
+#!/bin/sh
+
+LOCALTIME=$(date +"%d/%m/%Y %R")
+echo $LOCALTIME
