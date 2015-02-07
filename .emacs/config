@@ -28,3 +28,6 @@
 (load-directory "~/.emacs.d")
 
 (add-hook 'after-change-major-mode-hook 'fci-mode)
+
+;; Mutt support.
+(setq auto-mode-alist (append '(("/tmp/mutt.*" . mail-mode)) auto-mode-alist))
