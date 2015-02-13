@@ -31,3 +31,8 @@
 
 ;; Mutt support.
 (setq auto-mode-alist (append '(("/tmp/mutt.*" . mail-mode)) auto-mode-alist))
+
+;; Gnuplot support.
+(setq gnuplot-program "/usr/local/bin/gnuplot")
+(setq auto-mode-alist
+(append '(("\\.\\(gp\\|gnuplot\\|gpi\\|plt\\)$" . gnuplot-mode)) auto-mode-alist))
