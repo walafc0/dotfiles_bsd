@@ -1,0 +1,14 @@
+#!/bin/sh
+
+LAYOUT=$(setxkbmap -query | awk '/layout/ { print $2 }')
+
+if [ $LAYOUT = "us" ]; then
+    setxkbmap -layout fr -model pc105
+elif [ $LAYOUT = "fr" ]; then
+    setxkbmap -variant intl -layout us -model pc105
+else
+  echo "Wrong actual layout. You should have \"fr\" or \"us\"."
+  exit -1
+fi
+
+exit $?
